@@ -1,0 +1,31 @@
+{
+  "name": "wikistack",
+  "version": "1.0.0",
+  "description": "wikiclone",
+  "main": "app.js",
+  "scripts": {
+    "test": "wiki",
+    "start": "nodemon -e html,js,css ./app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AuroraVaughn/wikistack.git"
+  },
+  "author": "us",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AuroraVaughn/wikistack/issues"
+  },
+  "homepage": "https://github.com/AuroraVaughn/wikistack#readme",
+  "devDependencies": {
+    "nodemon": "^1.14.11"
+  },
+  "dependencies": {
+    "express": "^4.16.2",
+    "morgan": "^1.9.0",
+    "nunjucks": "^3.0.1",
+    "path": "^0.12.7",
+    "pg": "^6.4.2",
+    "sequelize": "^4.32.1"
+  }
+}
