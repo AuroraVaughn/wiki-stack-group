@@ -12,7 +12,7 @@ const models = require('./models')
 
 app.set('view engine', 'html');
 app.engine('html', nunjucks.render);
-
+nunjucks.configure('views', { noCache: true });
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -28,7 +28,9 @@ app.use(routes)
 //     console.log('get request')
 //     res.send('stufffffasdfgasgeg')
 // });
-models.db.sync({ force: true })
+models.db.sync(
+        // { force: true }
+    )
     .then(() => {
         return models.User.sync({}) //{} holds any parametes such as force: true
     })
